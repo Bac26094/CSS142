@@ -1,0 +1,74 @@
+/*  
+ * Author: Andy Chen
+ * Date: 04/06/2019
+ * Homework 1 - Reducing Redundancy Via Methods & Mario Boards
+ * Instructor: Rob Nash
+ */
+import java.util.*; // import Scanner from JDK library 
+public class Mario2{ // Start of Mario2
+    public static void main(String[] args) { // Start of main
+        Scanner inputMario = new Scanner(System.in); // User defines Mario
+        Scanner inputCoin = new Scanner(System.in); // User defines Coin
+        String Mario; // String will represent Mario in the game
+        String Coin; // String will represent Coins in the game
+        System.out.println("What does Mario look like? "); // Asked before playing the game
+        Mario = inputMario.nextLine(); // User input what Mario looks like before playing
+        System.out.println("What does a coin look like? "); // Asked before playing the game
+        Coin = inputCoin.nextLine(); // User input what Coin looks like before playing
+        System.out.println("Here is your level... "); // Start of level of Mario2
+       
+        segment1a(); // Calling segment1a method 
+        segment2a(Coin); // Calling segment2a method
+        segment2b(Coin); // Calling segment2b method
+        segment1b(Coin); // Calling segment1b method
+        segment3(Mario); // Calling segment3 method
+    } // End of Main  
+    public static void segment1a() { // Start of segment1a
+            System.out.println("||");
+            System.out.println("||");
+            System.out.println("||");
+            System.out.println("||");
+            System.out.println("||");
+            System.out.println("||");
+            System.out.println();
+    } // End of Segment1a
+    public static void segment1b(String Coin) { // Start of segment1b with 3 coins on floor
+            System.out.println("||");
+            System.out.println("||");
+            System.out.println("||" + Coin);
+            System.out.println("||" + Coin);
+            System.out.println("||" + Coin);
+            System.out.println("||");
+            System.out.println();
+        } // End of segment1b
+    public static void segment2a(String Coin) { // Start of segment2a with 2 coins on top of blocks 
+            System.out.println("||");
+            System.out.println("||  |?|" + Coin);
+            System.out.println("||");
+            System.out.println("||");
+            System.out.println("||  |?|" + Coin);
+            System.out.println("||");
+            System.out.println();
+        } // End of segment of 2a
+    public static void segment2b(String Coin) { // Start of segment2b with 2 blocks, 1 coin on last block
+            System.out.println("||");
+            System.out.println("||  |?|");
+            System.out.println("||");
+            System.out.println("||");
+            System.out.println("||  |?|" + Coin);
+            System.out.println("||");
+            System.out.println();
+        } // End of segment2b
+    public static void segment3(String Mario) { // Start of segment3 with Mario nearing flag going up the stairs 
+            System.out.println("||");
+            System.out.println("||||");
+            System.out.println("||||||");
+            System.out.println("||||||||");
+            System.out.println("||||||||||");
+            System.out.println("||||||||||||" + Mario);
+            System.out.println("||");
+            System.out.println("||");
+            System.out.println("||            ^");
+            System.out.println("|---------------");
+    } // End of segment3 
+} // End of Mario2 
